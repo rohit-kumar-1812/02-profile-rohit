@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Skills - PLSQL/SQL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="02-profile-rohit-kumar.html" class="title">ROHIT</a>
+				<nav>
+					<ul>
+						<li><a href="02-profile-rohit-kumar.html">Home</a></li>
+						<li><a href="oracle_apex.html" >APEX</a></li>
+            <li><a href="plsql.html" class="active">PL/SQL</a></li>
+						<li><a href="javascript.html" >JS</a></li>
+            <li><a href="pyhton.html" >Python</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">PL/SQL</h1>
+							<span class="image fit"><img src="images/generic_plsql_1.webp" alt="" /></span>
+							<p>PL/SQL (Procedural Language for SQL) is Oracle Corporation's procedural extension for SQL and the Oracle relational database. PL/SQL is available in Oracle Database (since version 6 - stored PL/SQL procedures/functions/packages/triggers since version 7), TimesTen in-memory database (since version 11.2.1), and IBM Db2 (since version 9.7). Oracle Corporation usually extends PL/SQL functionality with each successive release of the Oracle Database.</p>
+							<h2>PL/SQL Anonymous block</h2>
+              <pre><code>
+DECLARE
+-- this section is optional
+  number1 NUMBER(2);
+  number2 number1%TYPE := 17;             -- value default
+  text1   VARCHAR2(12) := '      Hello world       ';
+  text2   DATE         := SYSDATE;        -- current date and time
+BEGIN
+-- this section is mandatory, must contain at least one executable statement
+  SELECT street_number
+    INTO number1
+    FROM address
+    WHERE name = 'INU';
+EXCEPTION
+-- this section is optional
+   WHEN OTHERS THEN
+     DBMS_OUTPUT.PUT_LINE('Error Code is ' || TO_CHAR(sqlcode));
+     DBMS_OUTPUT.PUT_LINE('Error Message is ' || sqlerrm);
+END;
+              </code></pre>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: ROHIT</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
