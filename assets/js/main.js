@@ -63,13 +63,14 @@
 		});
 
 		// Close menu when clicking on a navigation link (mobile)
-		if (breakpoints.active('<=small')) {
-			$sidebar.find('a').on('click', function() {
+		$sidebar.find('a').on('click', function() {
+			// Only close if menu toggle is visible (mobile view)
+			if ($menuToggle.is(':visible')) {
 				$menuToggle.removeClass('active');
 				$sidebar.removeClass('active');
 				$menuOverlay.removeClass('active');
-			});
-		}
+			}
+		});
 
 	// Sidebar.
 		if ($sidebar.length > 0) {

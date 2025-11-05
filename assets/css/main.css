@@ -3978,13 +3978,17 @@ input, select, textarea {
 			-webkit-border-radius: 2px;
 			-ms-border-radius: 2px;
 			border-radius: 2px;
+			-moz-transform-origin: center;
+			-webkit-transform-origin: center;
+			-ms-transform-origin: center;
+			transform-origin: center;
 		}
 
 		.menu-toggle.active span:nth-child(1) {
-			-moz-transform: rotate(45deg) translate(0.5em, 0.5em);
-			-webkit-transform: rotate(45deg) translate(0.5em, 0.5em);
-			-ms-transform: rotate(45deg) translate(0.5em, 0.5em);
-			transform: rotate(45deg) translate(0.5em, 0.5em);
+			-moz-transform: translateY(0.52em) rotate(45deg);
+			-webkit-transform: translateY(0.52em) rotate(45deg);
+			-ms-transform: translateY(0.52em) rotate(45deg);
+			transform: translateY(0.52em) rotate(45deg);
 		}
 
 		.menu-toggle.active span:nth-child(2) {
@@ -3992,10 +3996,10 @@ input, select, textarea {
 		}
 
 		.menu-toggle.active span:nth-child(3) {
-			-moz-transform: rotate(-45deg) translate(0.5em, -0.5em);
-			-webkit-transform: rotate(-45deg) translate(0.5em, -0.5em);
-			-ms-transform: rotate(-45deg) translate(0.5em, -0.5em);
-			transform: rotate(-45deg) translate(0.5em, -0.5em);
+			-moz-transform: translateY(-0.52em) rotate(-45deg);
+			-webkit-transform: translateY(-0.52em) rotate(-45deg);
+			-ms-transform: translateY(-0.52em) rotate(-45deg);
+			transform: translateY(-0.52em) rotate(-45deg);
 		}
 
 		@media screen and (max-width: 736px) {
