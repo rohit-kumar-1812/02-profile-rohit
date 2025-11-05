@@ -3880,6 +3880,10 @@ input, select, textarea {
 				top: 0;
 				left: 0;
 				z-index: 10001;
+				padding: 2.5em 2.5em 0.5em 2.5em;
+				overflow-y: auto;
+				text-align: right;
+				line-height: 1;
 			}
 
 			#sidebar.active {
@@ -3888,6 +3892,47 @@ input, select, textarea {
 				-ms-transform: translateX(0);
 				transform: translateX(0);
 			}
+
+			#sidebar > .inner {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+				min-height: 100%;
+				height: auto;
+				line-height: 1;
+			}
+
+			#sidebar nav {
+				height: auto;
+				line-height: 1;
+			}
+
+				#sidebar nav ul {
+					display: block;
+					height: auto;
+					line-height: 1;
+				}
+
+					#sidebar nav ul li {
+						height: auto;
+						line-height: 1;
+						margin: 1.5em 0 0 0;
+					}
+
+						#sidebar nav ul li:first-child {
+							margin: 0;
+						}
+
+				#sidebar nav a {
+					height: auto;
+					line-height: 1.75;
+					padding: 1.35em 0;
+				}
 
 		}
 
