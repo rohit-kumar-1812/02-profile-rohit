@@ -44,6 +44,33 @@
 
 			});
 
+	// Mobile Menu Toggle.
+		var $menuToggle = $('#menu-toggle');
+		var $menuOverlay = $('#menu-overlay');
+
+		$menuToggle.on('click', function(e) {
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$sidebar.toggleClass('active');
+			$menuOverlay.toggleClass('active');
+		});
+
+		// Close menu when clicking on overlay
+		$menuOverlay.on('click', function() {
+			$menuToggle.removeClass('active');
+			$sidebar.removeClass('active');
+			$menuOverlay.removeClass('active');
+		});
+
+		// Close menu when clicking on a navigation link (mobile)
+		if (breakpoints.active('<=small')) {
+			$sidebar.find('a').on('click', function() {
+				$menuToggle.removeClass('active');
+				$sidebar.removeClass('active');
+				$menuOverlay.removeClass('active');
+			});
+		}
+
 	// Sidebar.
 		if ($sidebar.length > 0) {
 
