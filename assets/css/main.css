@@ -3471,8 +3471,8 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#sidebar + #wrapper {
-				margin-left: 0;
-				padding-top: 3.5em;
+				/* Keep margin for vertical sidebar */
+				margin-left: 18em;
 			}
 
 		}
@@ -3480,6 +3480,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#sidebar + #wrapper {
+				/* Remove margin on mobile when sidebar is hidden */
+				margin-left: 0;
 				padding-top: 0;
 			}
 
@@ -3498,6 +3500,16 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#sidebar + #wrapper + #footer {
+				/* Keep margin for vertical sidebar */
+				margin-left: 18em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#sidebar + #wrapper + #footer {
+				/* Remove margin on mobile when sidebar is hidden */
 				margin-left: 0;
 			}
 
@@ -3802,63 +3814,14 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
+			/* Keep sidebar vertical on all screen sizes above 736px */
 			#sidebar {
-				height: 3.5em;
-				left: 0;
-				line-height: 3.5em;
-				overflow: hidden;
-				padding: 0;
-				text-align: center;
-				top: 0;
-				width: 100%;
+				/* Maintain vertical sidebar layout instead of horizontal */
+				/* Original horizontal layout removed to improve mobile UX */
 			}
 
-				#sidebar > .inner {
-					-moz-flex-direction: row;
-					-webkit-flex-direction: row;
-					-ms-flex-direction: row;
-					flex-direction: row;
-					-moz-align-items: -moz-stretch;
-					-webkit-align-items: -webkit-stretch;
-					-ms-align-items: -ms-stretch;
-					align-items: stretch;
-					height: inherit;
-					line-height: inherit;
-				}
-
-				#sidebar nav {
-					height: inherit;
-					line-height: inherit;
-				}
-
-					#sidebar nav ul {
-						display: -moz-flex;
-						display: -webkit-flex;
-						display: -ms-flex;
-						display: flex;
-						height: inherit;
-						line-height: inherit;
-						margin: 0;
-					}
-
-						#sidebar nav ul li {
-							display: block;
-							height: inherit;
-							line-height: inherit;
-							margin: 0 0 0 2em;
-							padding: 0;
-						}
-
-					#sidebar nav a {
-						height: inherit;
-						line-height: inherit;
-						padding: 0;
-					}
-
-						#sidebar nav a:after {
-							background-image: none;
-							background-color: #b74e91;
-						}
+			/* Sidebar remains as vertical left panel */
+			/* No changes needed - inherits default vertical styles */
 
 		}
 
