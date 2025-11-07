@@ -3828,10 +3828,90 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#sidebar {
-				display: none;
+				/* Change from display:none to slide-in drawer */
+				display: block;
+				-moz-transform: translateX(-100%);
+				-webkit-transform: translateX(-100%);
+				-ms-transform: translateX(-100%);
+				transform: translateX(-100%);
+				-moz-transition: transform 0.3s ease;
+				-webkit-transition: transform 0.3s ease;
+				-ms-transition: transform 0.3s ease;
+				transition: transform 0.3s ease;
+			}
+
+			#sidebar.active {
+				-moz-transform: translateX(0);
+				-webkit-transform: translateX(0);
+				-ms-transform: translateX(0);
+				transform: translateX(0);
 			}
 
 		}
+
+/* Mobile Menu Toggle (Hamburger) */
+
+	#menu-toggle {
+		display: none;
+		position: fixed;
+		top: 1.5em;
+		left: 1.5em;
+		z-index: 10001;
+		background: #5e42a6;
+		border: 0;
+		border-radius: 0.35em;
+		cursor: pointer;
+		height: 3.5em;
+		width: 3.5em;
+		padding: 0.5em;
+		-moz-transition: background-color 0.2s ease;
+		-webkit-transition: background-color 0.2s ease;
+		-ms-transition: background-color 0.2s ease;
+		transition: background-color 0.2s ease;
+	}
+
+		#menu-toggle:hover {
+			background: #b74e91;
+		}
+
+		#menu-toggle span {
+			display: block;
+			width: 100%;
+			height: 3px;
+			background: #ffffff;
+			margin: 5px 0;
+			-moz-transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+
+		/* Hamburger animation when active */
+		#menu-toggle.active span:nth-child(1) {
+			-moz-transform: rotate(45deg) translate(8px, 8px);
+			-webkit-transform: rotate(45deg) translate(8px, 8px);
+			-ms-transform: rotate(45deg) translate(8px, 8px);
+			transform: rotate(45deg) translate(8px, 8px);
+		}
+
+		#menu-toggle.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		#menu-toggle.active span:nth-child(3) {
+			-moz-transform: rotate(-45deg) translate(8px, -8px);
+			-webkit-transform: rotate(-45deg) translate(8px, -8px);
+			-ms-transform: rotate(-45deg) translate(8px, -8px);
+			transform: rotate(-45deg) translate(8px, -8px);
+		}
+
+	@media screen and (max-width: 736px) {
+
+		#menu-toggle {
+			display: block;
+		}
+
+	}
 
 /* Intro */
 

@@ -187,4 +187,18 @@
 				}
 			});
 
+	// Mobile Menu Toggle.
+		$('#menu-toggle').on('click', function() {
+			$(this).toggleClass('active');
+			$('#sidebar').toggleClass('active');
+		});
+
+		// Close menu when clicking on a link
+		$('#sidebar a').on('click', function() {
+			if ($('#menu-toggle').is(':visible')) {
+				$('#menu-toggle').removeClass('active');
+				$('#sidebar').removeClass('active');
+			}
+		});
+
 })(jQuery);
