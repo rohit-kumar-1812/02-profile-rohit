@@ -187,4 +187,33 @@
 				}
 			});
 
+	// Mobile Menu Toggle.
+		$('#menu-toggle').on('click', function() {
+			$(this).toggleClass('active');
+			// Toggle sidebar on main page
+			if ($('#sidebar').length) {
+				$('#sidebar').toggleClass('active');
+			}
+			// Toggle header on skill pages
+			if ($('#header').length) {
+				$('#header').toggleClass('active');
+			}
+		});
+
+		// Close menu when clicking on a link (for sidebar)
+		$('#sidebar a').on('click', function() {
+			if ($('#menu-toggle').is(':visible')) {
+				$('#menu-toggle').removeClass('active');
+				$('#sidebar').removeClass('active');
+			}
+		});
+
+		// Close menu when clicking on a link (for header)
+		$('#header a').on('click', function() {
+			if ($('#menu-toggle').is(':visible')) {
+				$('#menu-toggle').removeClass('active');
+				$('#header').removeClass('active');
+			}
+		});
+
 })(jQuery);
